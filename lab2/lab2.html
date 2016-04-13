@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	    <!-- Allow web app to be run in full-screen mode. -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <!-- Configure the status bar. -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	    <!-- Make the app title different than the page title. -->
+	    <meta name="apple-mobile-web-app-title" content="Get reedy!">
+	    <!-- iPhone retina icon (iOS < 7) -->
+	    <link href="https://www.prosado.com/uploads/ArticleModel/11/image/nyt.news.news.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	    <!-- Include jQuery Mobile stylesheets -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<!-- Include the jQuery library -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<!-- Include the jQuery Mobile library -->
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="lab2.js"></script> 
+
+	    <style type="text/css">
+	    	html, body{
+	    		height:100%; 
+	    		width: 100%;
+	    		margin:0; 
+	    		padding: 0;
+	    		overflow:hidden;
+	    	}
+	    </style>
+	</head>
+
+	<body>
+		<div data-role="page" id="mainPage">
+			<div data-role="panel" id="myPanel" data-display="push" data-position="right"> 
+			    <h2>Category</h2>
+			    <div id="filterOptions" style="height:400px;overflow-y: scroll; -webkit-overflow-scrolling: touch;"></div>
+			    <a href="#mainPage" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Apply filter</a>
+			</div> 
+
+			<div data-role="header" data-position="fixed">
+				<h1>Readie!</h1>
+				<a href="#myPanel" class="class=ui-btn ui-btn-right ui-corner-all ui-shadow">Filter</a>
+			</div>
+
+		    <div data-role="main" class="ui-content" id="feedContainer" style="height:465px; overflow-y: scroll; -webkit-overflow-scrolling: touch;"></div>
+		</div>
+
+		<div data-role="page" id="entryPage">
+			<div data-role="header" data-position="fixed">
+			    <a href="#" class="ui-btn" data-rel="back">Go Back</a>
+				<h1></h1>
+			</div>
+
+		    <div data-role="main" class="ui-content" id="entryContainer" style="text-align:center;height:465px;overflow-y: scroll; -webkit-overflow-scrolling: touch;"></div>
+		</div>
+	</body>
+</html

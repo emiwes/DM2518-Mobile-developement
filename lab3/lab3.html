@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> <!--manifest="manifest.mf"-->
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Get Chatty!</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- Allow web app to be run in full-screen mode. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Configure the status bar. -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="white"> 
+        <!-- Make the app title different than the page title. -->
+        <meta name="apple-mobile-web-app-title" content="Get chatty!">
+        <!-- iPhone retina icon (iOS < 7) -->
+        <link href="https://insightsout.files.wordpress.com/2010/03/pat-on-the-back-black-and-white.jpg?w=450" sizes="114x114" rel="apple-touch-icon-precomposed">
+        <!-- iPhone 5 startup image -->
+        <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="img/apple-touch-startup-image-640x1096.png">
+        <!-- iPhone < 5 retina startup image -->
+        <link href="img/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <!-- iPhone < 5 non-retina startup image -->
+        <link href="img/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+        <!-- Include jQuery Mobile stylesheets -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <!-- Include the jQuery library -->
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <!-- Include the jQuery Mobile library -->
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- Pubnub libraries -->
+        <script src='http://cdn.pubnub.com/pubnub-3.4.min.js'></script>
+
+        <link rel="stylesheet" type="text/css" href="lab3.css">
+
+        <script type="text/javascript" src="lab3.js"></script>
+    </head>
+
+    <body>
+
+        <div data-role="page" id="page1">
+            <div data-role="main" class="ui-content">
+                <h4>Who are you?!</h4>
+                <form id="userForm">
+                    <input class="ui-input" type="text" placeholder="Enter your name" id="user"></input>
+                    <button type="submit" class="ui-btn">Let's Get Chatty!</button>
+                </form>
+            </div>
+        </div>
+
+        <div data-role="page" id="page2">
+            <div data-role="header" id="header" data-position="fixed">
+                <img src="img/compass-North.png" id="compassImg"/>
+                <p style="font-size: 3vw" id="alpha-position"></p><p style="font-size: 3vw" id="presence"></p>
+            </div>
+
+            <div data-role="main" class="ui-content" id="output"></div>
+
+            <div data-position="fixed">
+                <input class="ui-input" type="text" placeholder="Enter chat here" id="msg"></input>
+                <button type="button" id="buttonSend" class="ui-btn">Send</button>
+            </div>
+        </div>
+
+    </body>
+</html>
